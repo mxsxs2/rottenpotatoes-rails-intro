@@ -1,12 +1,12 @@
 -#  This file is app/views/movies/index.html.haml
 %h2 All Movies
 
-%table.table-striped.col-md-5
+%table{:class=>"table-striped col-md-5",:id=>"movies"}
   %thead
     %tr
-      %th Movie Title
+      %th{:id=>"title_header"} Movie Title
       %th Rating
-      %th Release Date
+      %th{:id=>"release_date_header"} Release Date
       %th More Info
   %tbody
     - @movies.each do |movie|
